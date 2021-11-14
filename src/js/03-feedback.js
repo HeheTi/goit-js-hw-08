@@ -12,7 +12,7 @@ const onSaveInfo = event => {
 };
 
 const takeUserInfo = JSON.parse(localStorage.getItem(FORM_STORAGE));
-const checkUserInfo = takeUserInfo ?? {};
+const checkUserInfo = takeUserInfo ? takeUserInfo: {};
 
 const saveData = obj => {
   if (!obj) return;
